@@ -1,0 +1,15 @@
+﻿using EMS.BLL.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EMS.BLL.Interface
+{
+    public interface IUserManager
+    {
+        Task<LoginViewModel> CheckIsUserValid(string email, string password);
+        string GetUserPasswordSalt(string userName);
+    }
+}
